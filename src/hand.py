@@ -45,10 +45,11 @@ class Hand:
     def discard_card(self, idx: int):
         return self.cards.pop(idx)
 
-    def determine_hand(self) -> tuple[str, int]:
+    def get_hand_score(self) -> tuple[str, int]:
         # Sort cards by rank
-
         self.sort_by_rank()
+
+        # Counter variables
         pairs = 0
         trios = 0
         four_of_a_kinds = 0
@@ -59,6 +60,7 @@ class Hand:
         previous_card = self.cards[0]
         highest_card = self.cards[0]
 
+        # Get hand types
         equal_card = 0
         for card in self.cards[1:]:
 
@@ -94,6 +96,7 @@ class Hand:
 
             previous_card = card
 
+        # Get hand score
         card_values = sum(x if x != 1 else 14 for x in self.get_ranks)
         if flush and straight:
             hand_name = "Straight Flush"

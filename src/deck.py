@@ -6,9 +6,11 @@ class Deck:
 
     def __init__(self) -> None:
 
-        # Build deck
         self.deck: list[Card] = []
 
+        self.reset_deck()
+
+    def reset_deck(self):
         for suit in Card.SUIT_TO_STR.keys():
             for rank in Card.RANK_TO_STR.keys():
                 self.deck.append(Card(rank, suit))

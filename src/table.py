@@ -21,9 +21,12 @@ class Table:
         self.player.hand.add_card(self.deck.deal_card())
 
     def end_game(self):
-        rival_hand_name, rival_hand_score = self.rival.determine_hand()
-        player_hand_name, player_hand_score = self.player.determine_hand()
 
+        # Get scores
+        rival_hand_name, rival_hand_score = self.rival.get_hand_score()
+        player_hand_name, player_hand_score = self.player.get_hand_score()
+
+        # Determine winner
         if player_hand_score > rival_hand_score:
             winner = self.player
             winning_hand = player_hand_name
@@ -34,6 +37,7 @@ class Table:
             winner = None
             winning_hand = None
 
+        # Show results
         print(self.rival)
         print(f"\t{rival_hand_name}")
         print("\n\t\t\tvs.\n")

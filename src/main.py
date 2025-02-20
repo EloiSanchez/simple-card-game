@@ -8,12 +8,16 @@ MAX_TURNS = 3
 
 
 def main():
+
+    # Get players
     player = Player(input("What is your name? "))
     rival = Player(input("What is the name of your rival? "))
 
+    # Instantiate table/dealer
     table = Table(player, rival)
 
     print("Starting game")
+    sleep(1)
 
     table.deal_hand(5)
 
