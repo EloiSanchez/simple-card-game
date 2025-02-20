@@ -27,7 +27,12 @@ def main():
         turn += 1
         print(SEPARATOR)
         print(player)
-        discarded_cards = player.discard()
+        inp = input("Introduce cards to discard (e.g. 0, 3, 4): ").strip()
+        if inp:
+            discard_idx = [int(x.strip()) for x in inp.split(",")]
+        else:
+            discard_idx = None
+        discarded_cards = player.discard(discard_idx)
         for _ in range(discarded_cards):
             table.deal_card()
             sleep(1)

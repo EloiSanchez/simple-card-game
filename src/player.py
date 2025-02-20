@@ -7,13 +7,9 @@ class Player:
         self.name: str = name
         self.hand: Hand = Hand()
 
-    def discard(self) -> int:
-        inp = input("Introduce cards to discard (e.g. 0, 3, 4): ").strip()
-
-        if not inp:
+    def discard(self, discard_idx: list[int] | None) -> int:
+        if not discard_idx:
             return 0
-
-        discard_idx = [int(x.strip()) for x in inp.split(",")]
 
         discard_idx.sort(reverse=True)
         discarded_cards = len(discard_idx)
@@ -29,5 +25,5 @@ class Player:
 
         return value
 
-    def determine_hand(self) -> tuple[str, int]:
-        return self.hand.determine_hand()
+    def get_hand_score(self) -> tuple[str, int]:
+        return self.hand.get_hand_score()
