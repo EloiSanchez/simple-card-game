@@ -24,6 +24,7 @@ class Hand:
         for card in self:
             value += "".join(f"{card.short_repr():<}  ".rjust(6))
         value += "\n\t" + "     ┘" * 5 + "\n"
+        value += "\t" + "".join(f"  {i}   " for i in range(5)) + "\n"
 
         return value
 
