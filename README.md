@@ -6,8 +6,29 @@ It was made as an example solution for an exercises proposed to the Nimbus Intel
 
 ## How to run
 
-Have a Python installation with version 3.9 or higher. Run:
+### Requirements
+
+Be able to create a Python virtual environment with Python 3.10 or higher.
+
+### Install
+
+Create a new environment and activate it. For example, with `venv`:
 
 ```shell
-python3 src/main.py
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Install the library:
+
+```shell
+pip install .
+```
+
+### Play
+
+Run game:
+
+```shell
+python3 play_game.py
 ```

@@ -1,4 +1,4 @@
-from card import Card, Rank
+from simple_card_game.card import Card, Rank
 
 
 class Hand:

@@ -1,11 +1,8 @@
-import sys
 import unittest
 
-sys.path.insert(1, "src")
-
-from card import Card
-from hand import Hand
-from player import Player
+from simple_card_game.card import Card
+from simple_card_game.hand import Hand
+from simple_card_game.player import Player
 
 
 class TestPlayer(unittest.TestCase):

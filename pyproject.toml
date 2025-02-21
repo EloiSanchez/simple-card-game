@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple_card_game"
+version = "0.0.1"
+authors = [
+  { name="Eloi Sanchez", email="eloisanchez16@gmail.com" },
+]
+description = "Simple card game to show usage of OOP."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU General Public License v3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/EloiSanchez/simple-card-game"
+Issues = "https://github.com/EloiSanchez/simple-card-game/issues"

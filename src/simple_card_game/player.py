@@ -1,4 +1,5 @@
-from hand import Hand
+from simple_card_game.card import Card
+from simple_card_game.hand import Hand
 
 
 class Player:
@@ -17,6 +18,9 @@ class Player:
             self.hand.discard_card(idx)
 
         return discarded_cards
+
+    def take_card(self, card: Card):
+        self.hand.add_card(card)
 
     def __repr__(self) -> str:
         value = f"\tPlayer: {self.name}\n\n\tHand:\n"
